@@ -1,0 +1,23 @@
+2024-11-20 17:33:19,502 - INFO - Cookies cleaned successfully
+2024-11-20 17:33:19,505 - INFO - Local Storage cleaned successfully
+2024-11-20 17:33:19,506 - INFO - Session Storage cleaned successfully
+2024-11-20 17:33:25,965 - INFO - Cookies cleaned successfully
+2024-11-20 17:33:25,965 - INFO - Local Storage cleaned successfully
+2024-11-20 17:33:25,965 - INFO - Session Storage cleaned successfully
+2024-11-20 17:33:26,519 - INFO - Cookies cleaned successfully
+2024-11-20 17:33:26,520 - INFO - Local Storage cleaned successfully
+2024-11-20 17:33:26,520 - INFO - Session Storage cleaned successfully
+2024-11-20 17:33:26,708 - INFO - Cookies cleaned successfully
+2024-11-20 17:33:26,709 - INFO - Local Storage cleaned successfully
+2024-11-20 17:33:26,709 - INFO - Session Storage cleaned successfully
+2024-11-20 17:36:08,137 - INFO - Cookies cleaned successfully
+2024-11-20 17:36:08,138 - INFO - Local Storage cleaned successfully
+2024-11-20 17:36:08,139 - INFO - Session Storage cleaned successfully
+2024-11-20 17:36:14,229 - INFO - Cookies cleaned successfully
+2024-11-20 17:36:14,229 - INFO - Local Storage cleaned successfully
+2024-11-20 17:36:14,229 - INFO - Session Storage cleaned successfully
+2024-11-20 17:42:49,563 - INFO - Cookies cleaned successfully
+2024-11-20 17:42:49,564 - ERROR - Error during cleaning: 'ChromeCleaner' object has no attribute 'display_data'
+2024-11-20 17:43:41,943 - INFO - Cookies cleaned successfully
+2024-11-20 17:59:11,310 - INFO - Cookies cleaned successfully
+2024-11-20 18:05:08,713 - INFO - Cookies cleaned successfully
