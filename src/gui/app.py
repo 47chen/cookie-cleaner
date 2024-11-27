@@ -250,8 +250,16 @@ class BrowserCleanerGUI(QMainWindow):
 
     def closeEvent(self, event):
         """Handle application closing"""
-        logging.info("Application closing")
-        event.accept()
+        try:
+            # Clean up old log files
+            from ..utils.logger import cleanup_old_logs
+            cleanup_old_logs("logs")
+            
+            logging.info("Application closing")
+            event.accept()
+        except Exception as e:
+            logging.error(f"Error during application cleanup: {str(e)}")
+            event.accept()
 
     def clean_all_browsers(self):
         """Clean cookies from all browsers"""

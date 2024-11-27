@@ -1,9 +1,0 @@
-2024-11-27 17:26:18,034 - src.utils.logger - INFO - Starting Browser Cookie Cleaner
-2024-11-27 17:26:18,034 - src.utils.logger - INFO - Python version: 3.12.6 (main, Sep  6 2024, 19:03:47) [Clang 15.0.0 (clang-1500.3.9.4)]
-2024-11-27 17:26:18,034 - src.utils.logger - INFO - Operating System: darwin
-2024-11-27 17:26:20,507 - ChromeBrowser - INFO - Found running Chrome process: chrome
-2024-11-27 17:26:29,482 - ChromeBrowser - INFO - Cleared cache: /Users/timchen2/Library/Caches/Google/Chrome/Default/Cache
-2024-11-27 17:26:29,484 - ChromeBrowser - INFO - Cleared cache: /Users/timchen2/Library/Application Support/Google/Chrome/Default/GPUCache
-2024-11-27 17:26:30,522 - ChromeBrowser - INFO - Cleared cache: /Users/timchen2/Library/Application Support/Google/Chrome/Default/Service Worker/CacheStorage
-2024-11-27 17:26:30,524 - ChromeBrowser - INFO - Successfully cleaned 951 cookies
-2024-11-27 17:26:54,351 - root - INFO - Application closing
