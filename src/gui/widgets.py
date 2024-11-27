@@ -28,30 +28,37 @@ class LoadingWidget(QWidget):
         """Hide the loading widget"""
         self.hide()
 
-class StatusWidget(QWidget):
-    """Widget to show operation status"""
-    def __init__(self, parent=None):
-        super().__init__(parent)
-        self.setup_ui()
+class StatusWidget(QLabel):
+    """Widget for displaying status messages"""
+    
+    def __init__(self):
+        super().__init__()
+        self.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.hide()
         
-    def setup_ui(self):
-        layout = QVBoxLayout(self)
-        
-        # Status label
-        self.label = QLabel()
-        self.label.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        layout.addWidget(self.label)
-        
-    def show_success(self, message, duration=3000):
+    def show_message(self, message: str, color: str, duration: int = 5000):
+        """Show a message with specified color for duration milliseconds"""
+        self.setText(message)
+        self.setStyleSheet(f"""
+            QLabel {{
+                color: {color};
+                background-color: rgba(0, 0, 0, 0.1);
+                padding: 10px;
+                border-radius: 5px;
+                font-weight: bold;
+            }}
+        """)
+        self.show()
+        QTimer.singleShot(duration, self.hide)
+
+    def show_success(self, message: str):
         """Show success message"""
-        self.label.setStyleSheet("color: green;")
-        self.label.setText(message)
-        self.show()
-        QTimer.singleShot(duration, self.hide)
-        
-    def show_error(self, message, duration=3000):
+        self.show_message(message, "#28a745")  # Green
+
+    def show_error(self, message: str):
         """Show error message"""
-        self.label.setStyleSheet("color: red;")
-        self.label.setText(message)
-        self.show()
-        QTimer.singleShot(duration, self.hide)
+        self.show_message(message, "#dc3545")  # Red
+
+    def show_info(self, message: str):
+        """Show info message"""
+        self.show_message(message, "#17a2b8")  # Blue

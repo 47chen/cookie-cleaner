@@ -94,9 +94,10 @@ class BrowserCleanerGUI(QMainWindow):
         self.instructions_label = QLabel(
             "How to verify cleaning:\n"
             "1. Before cleaning: Visit and login to a website\n"
-            "2. Click 'Clean Cookies'\n"
-            "3. Go back to the website and refresh\n"
-            "4. If cleaning was successful, you should be logged out"
+            "2. Click 'Show Cookies Details' to see current cookies\n"
+            "3. Click 'Clean All Browsers' Cookies\n"
+            "4. Go back to the website and refresh\n"
+            "5. If cleaning was successful, you should be logged out"
         )
         self.instructions_label.setAlignment(Qt.AlignmentFlag.AlignLeft)
         
@@ -120,8 +121,24 @@ class BrowserCleanerGUI(QMainWindow):
         self.display_cookies("Firefox", cookies)
 
     def clean_chrome_data(self):
-        success, initial, final = self.chrome.clean_cookies()
-        self.handle_cleaning_result("Chrome", success, initial, final)
+        """Clean Chrome cookies with enhanced process handling"""
+        try:
+            self.loading_widget.start()
+        
+            if self.chrome.is_running():
+                self.status_label.setText ("Chrome is running. Attempting to force quit...")
+                if not self.chrome.force_quit_chrome():
+                    self.status_label.setText("Unable to close Chrome. Please close it manually.")
+                    return
+
+            success, initial, final = self.chrome.clean_cookies()
+            self.handle_cleaning_result("Chrome", success, initial, final)
+
+        except Exception as e:
+            logging.error(f"Error cleaning Chrome cookies: {str(e)}")
+            self.status_label.setText("Error during cleaning! See log for details.")
+        finally:
+            self.loading_widget.stop()
 
     def clean_firefox_data(self):
         success, initial, final = self.firefox.clean_cookies()
@@ -245,11 +262,16 @@ class BrowserCleanerGUI(QMainWindow):
             results = []
             
             # Clean Chrome
-            if not self.chrome.is_running():
+            if self.chrome.is_running():
+                self.status_label.setText("Chrome is running. Attempting to force quit...")
+                if not self.chrome.force_quit_chrome():
+                    self.status_label.setText("Unable to close Chrome. Please close it manually.")
+                else:
+                    success, initial, final = self.chrome.clean_cookies()
+                    results.append(("Chrome", success, initial, final))
+            else:
                 success, initial, final = self.chrome.clean_cookies()
                 results.append(("Chrome", success, initial, final))
-            else:
-                self.status_widget.show_error("Please close Chrome before cleaning!")
                 
             # Clean Firefox
             if not self.firefox.is_running():
