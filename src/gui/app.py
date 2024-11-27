@@ -4,6 +4,7 @@ from PyQt6.QtCore import Qt
 import logging
 from ..browsers.chrome import ChromeBrowser
 from ..browsers.firefox import FirefoxBrowser
+from ..browsers.edge import EdgeBrowser
 from .widgets import LoadingWidget, StatusWidget
 
 class BrowserCleanerGUI(QMainWindow):
@@ -11,6 +12,7 @@ class BrowserCleanerGUI(QMainWindow):
         super().__init__()
         self.chrome = ChromeBrowser()
         self.firefox = FirefoxBrowser()
+        self.edge = EdgeBrowser()
         self.setup_ui()
 
     def setup_ui(self):
@@ -56,7 +58,9 @@ class BrowserCleanerGUI(QMainWindow):
             ("Clean Chrome Cookies", self.clean_chrome_data),
             ("Clean Firefox Cookies", self.clean_firefox_data),
             ("Verify Cleaning", self.verify_cleaning),
-            ("Show Cookie Details", self.show_cookie_info)
+            ("Show Cookie Details", self.show_cookie_info),
+            ("Display Edge Cookies", self.display_edge_data),
+            ("Clean Edge Cookies", self.clean_edge_data)
         ]
 
         for text, slot in buttons:
@@ -102,6 +106,25 @@ class BrowserCleanerGUI(QMainWindow):
         success, initial, final = self.firefox.clean_cookies()
         self.handle_cleaning_result("Firefox", success, initial, final)
 
+    def display_edge_data(self):
+        """Display Edge cookie data"""
+        cookies = self.edge.get_cookie_details()
+        self.display_cookies("Edge", cookies)
+
+    def clean_edge_data(self):
+        """Clean Edge cookies"""
+        try:
+            if self.edge.is_running():
+                self.status_widget.show_error("Please close Edge before cleaning!")
+                return
+
+            success, initial, final = self.edge.clean_cookies()
+            self.handle_cleaning_result("Edge", success, initial, final)
+
+        except Exception as e:
+            logging.error(f"Error cleaning Edge cookies: {str(e)}")
+            self.status_widget.show_error("Error during cleaning! See log for details.")
+
     # Helper methods
     def display_cookies(self, browser_name, cookies):
         """Display cookie information in the log"""
@@ -125,8 +148,10 @@ class BrowserCleanerGUI(QMainWindow):
             self.status_label.setText(msg)
             if browser_name == "Chrome":
                 self.display_chrome_data()
-            else:
+            elif browser_name == "Firefox":
                 self.display_firefox_data()
+            else:
+                self.display_edge_data()
         else:
             self.status_label.setText(f"Error cleaning {browser_name} cookies!")
 
@@ -134,10 +159,12 @@ class BrowserCleanerGUI(QMainWindow):
         """Verify the cleaning process"""
         chrome_count = self.chrome.get_cookie_count()
         firefox_count = self.firefox.get_cookie_count()
+        edge_cookies = self.edge.get_cookie_details()
         
         verification_text = "=== Verification Results ===\n\n"
         verification_text += f"Chrome Cookies: {chrome_count}\n"
-        verification_text += f"Firefox Cookies: {firefox_count}\n\n"
+        verification_text += f"Firefox Cookies: {firefox_count}\n"
+        verification_text += f"Edge Cookies: {len(edge_cookies)}\n\n"
         verification_text += "To verify:\n"
         verification_text += "1. Try accessing previous websites - you should be logged out\n"
         verification_text += "2. Websites should treat you as a new visitor\n"
@@ -149,10 +176,12 @@ class BrowserCleanerGUI(QMainWindow):
         """Show detailed cookie information for all browsers"""
         chrome_cookies = self.chrome.get_cookie_details()
         firefox_cookies = self.firefox.get_cookie_details()
+        edge_cookies = self.edge.get_cookie_details()
     
         info_text = "=== Detailed Cookie Information ===\n\n"
         info_text += f"Chrome Cookies: {len(chrome_cookies)}\n"
-        info_text += f"Firefox Cookies: {len(firefox_cookies)}\n\n"
+        info_text += f"Firefox Cookies: {len(firefox_cookies)}\n"
+        info_text += f"Edge Cookies: {len(edge_cookies)}\n\n"
         
         info_text += "=== Chrome Cookies ===\n"
         for i, cookie in enumerate(chrome_cookies, 1):
@@ -164,6 +193,14 @@ class BrowserCleanerGUI(QMainWindow):
     
         info_text += "\n=== Firefox Cookies ===\n"
         for i, cookie in enumerate(firefox_cookies, 1):
+            info_text += f"\nCookie #{i}:\n"
+            info_text += f"Host: {cookie[0]}\n"
+            info_text += f"Name: {cookie[1]}\n"
+            info_text += f"Path: {cookie[2]}\n"
+            info_text += "-" * 50 + "\n"
+    
+        info_text += "\n=== Edge Cookies ===\n"
+        for i, cookie in enumerate(edge_cookies, 1):
             info_text += f"\nCookie #{i}:\n"
             info_text += f"Host: {cookie[0]}\n"
             info_text += f"Name: {cookie[1]}\n"
