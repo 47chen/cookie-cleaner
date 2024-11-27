@@ -21,3 +21,83 @@
 2024-11-20 17:43:41,943 - INFO - Cookies cleaned successfully
 2024-11-20 17:59:11,310 - INFO - Cookies cleaned successfully
 2024-11-20 18:05:08,713 - INFO - Cookies cleaned successfully
+2024-11-22 15:58:03,757 - INFO - Firefox profile path: /Users/timchen2/Library/Application Support/Firefox/Profiles/gwvs6fcp.default-release
+2024-11-22 15:58:03,758 - INFO - Firefox cookie path: /Users/timchen2/Library/Application Support/Firefox/Profiles/gwvs6fcp.default-release/cookies.sqlite
+2024-11-22 15:58:03,758 - INFO - Attempting to clean Firefox cookies from: /Users/timchen2/Library/Application Support/Firefox/Profiles/gwvs6fcp.default-release/cookies.sqlite
+2024-11-22 15:58:03,803 - ERROR - Failed to clean Firefox cookies after all attempts
+2024-11-22 15:58:23,403 - INFO - Firefox profile path: /Users/timchen2/Library/Application Support/Firefox/Profiles/gwvs6fcp.default-release
+2024-11-22 15:58:23,403 - INFO - Firefox cookie path: /Users/timchen2/Library/Application Support/Firefox/Profiles/gwvs6fcp.default-release/cookies.sqlite
+2024-11-22 15:58:23,403 - INFO - Attempting to clean Firefox cookies from: /Users/timchen2/Library/Application Support/Firefox/Profiles/gwvs6fcp.default-release/cookies.sqlite
+2024-11-22 15:58:23,413 - ERROR - Failed to clean Firefox cookies after all attempts
+2024-11-22 16:00:43,237 - INFO - Firefox profile path: /Users/timchen2/Library/Application Support/Firefox/Profiles/gwvs6fcp.default-release
+2024-11-22 16:00:43,239 - INFO - Firefox cookie path: /Users/timchen2/Library/Application Support/Firefox/Profiles/gwvs6fcp.default-release/cookies.sqlite
+2024-11-22 16:00:43,239 - INFO - Attempting to clean Firefox cookies from: /Users/timchen2/Library/Application Support/Firefox/Profiles/gwvs6fcp.default-release/cookies.sqlite
+2024-11-22 16:00:43,289 - ERROR - Failed to clean Firefox cookies after all attempts
+2024-11-22 16:01:09,073 - INFO - Firefox profile path: /Users/timchen2/Library/Application Support/Firefox/Profiles/gwvs6fcp.default-release
+2024-11-22 16:01:09,074 - INFO - Firefox cookie path: /Users/timchen2/Library/Application Support/Firefox/Profiles/gwvs6fcp.default-release/cookies.sqlite
+2024-11-22 16:01:09,074 - INFO - Attempting to clean Firefox cookies from: /Users/timchen2/Library/Application Support/Firefox/Profiles/gwvs6fcp.default-release/cookies.sqlite
+2024-11-22 16:01:09,083 - ERROR - Failed to clean Firefox cookies after all attempts
+2024-11-22 16:03:17,905 - INFO - Firefox profile path: /Users/timchen2/Library/Application Support/Firefox/Profiles/gwvs6fcp.default-release
+2024-11-22 16:03:17,907 - INFO - Firefox cookie path: /Users/timchen2/Library/Application Support/Firefox/Profiles/gwvs6fcp.default-release/cookies.sqlite
+2024-11-22 16:03:17,907 - INFO - Attempting to clean Firefox cookies from: /Users/timchen2/Library/Application Support/Firefox/Profiles/gwvs6fcp.default-release/cookies.sqlite
+2024-11-22 16:03:17,950 - ERROR - Failed to clean Firefox cookies after all attempts
+2024-11-22 16:03:20,406 - INFO - Firefox profile path: /Users/timchen2/Library/Application Support/Firefox/Profiles/gwvs6fcp.default-release
+2024-11-22 16:03:20,406 - INFO - Firefox cookie path: /Users/timchen2/Library/Application Support/Firefox/Profiles/gwvs6fcp.default-release/cookies.sqlite
+2024-11-22 16:03:20,406 - INFO - Attempting to clean Firefox cookies from: /Users/timchen2/Library/Application Support/Firefox/Profiles/gwvs6fcp.default-release/cookies.sqlite
+2024-11-22 16:03:20,429 - ERROR - Failed to clean Firefox cookies after all attempts
+2024-11-22 16:03:22,843 - INFO - Firefox profile path: /Users/timchen2/Library/Application Support/Firefox/Profiles/gwvs6fcp.default-release
+2024-11-22 16:03:22,843 - INFO - Firefox cookie path: /Users/timchen2/Library/Application Support/Firefox/Profiles/gwvs6fcp.default-release/cookies.sqlite
+2024-11-22 16:03:22,843 - INFO - Attempting to clean Firefox cookies from: /Users/timchen2/Library/Application Support/Firefox/Profiles/gwvs6fcp.default-release/cookies.sqlite
+2024-11-22 16:03:22,854 - ERROR - Failed to clean Firefox cookies after all attempts
+2024-11-22 16:11:38,745 - INFO - === Debug Point 1 ===
+2024-11-22 16:11:38,746 - INFO - Profile path exists: True
+2024-11-22 16:11:38,746 - INFO - Cookie path exists: True
+2024-11-22 16:11:38,746 - INFO - === Debug Point 2 ===
+2024-11-22 16:11:38,796 - INFO - === Debug Point 3 ===
+2024-11-22 16:11:38,797 - INFO - Successfully copied database
+2024-11-22 16:11:38,797 - INFO - Current cookie count: 37
+2024-11-22 16:11:38,798 - INFO - Database operations successful
+2024-11-22 16:11:44,656 - INFO - === Debug Point 1 ===
+2024-11-22 16:11:44,657 - INFO - Profile path exists: True
+2024-11-22 16:11:44,657 - INFO - Cookie path exists: True
+2024-11-22 16:11:44,657 - INFO - === Debug Point 2 ===
+2024-11-22 16:11:44,676 - INFO - === Debug Point 3 ===
+2024-11-22 16:11:44,676 - INFO - Successfully copied database
+2024-11-22 16:11:44,677 - INFO - Current cookie count: 37
+2024-11-22 16:11:44,677 - INFO - Database operations successful
+2024-11-22 16:11:45,897 - INFO - === Debug Point 1 ===
+2024-11-22 16:11:45,897 - INFO - Profile path exists: True
+2024-11-22 16:11:45,898 - INFO - Cookie path exists: True
+2024-11-22 16:11:45,898 - INFO - === Debug Point 2 ===
+2024-11-22 16:11:45,919 - INFO - === Debug Point 3 ===
+2024-11-22 16:11:45,921 - INFO - Successfully copied database
+2024-11-22 16:11:45,922 - INFO - Current cookie count: 37
+2024-11-22 16:11:45,922 - INFO - Database operations successful
+2024-11-22 16:15:00,547 - INFO - === Debug Point 1 ===
+2024-11-22 16:15:00,548 - INFO - Profile path exists: True
+2024-11-22 16:15:00,548 - INFO - Cookie path exists: True
+2024-11-22 16:15:00,548 - INFO - === Debug Point 2 ===
+2024-11-22 16:15:00,597 - INFO - === Debug Point 3 ===
+2024-11-22 16:16:05,355 - INFO - === Debug Point 1 ===
+2024-11-22 16:16:05,355 - INFO - Profile path exists: True
+2024-11-22 16:16:05,355 - INFO - Cookie path exists: True
+2024-11-22 16:16:05,355 - INFO - === Debug Point 2 ===
+2024-11-22 16:16:05,367 - INFO - === Debug Point 3 ===
+2024-11-22 16:16:06,367 - INFO - === Debug Point 1 ===
+2024-11-22 16:16:06,368 - INFO - Profile path exists: True
+2024-11-22 16:16:06,368 - INFO - Cookie path exists: True
+2024-11-22 16:16:06,368 - INFO - === Debug Point 2 ===
+2024-11-22 16:16:06,376 - INFO - === Debug Point 3 ===
+2024-11-22 16:16:09,717 - INFO - === Debug Point 1 ===
+2024-11-22 16:16:09,717 - INFO - Profile path exists: True
+2024-11-22 16:16:09,717 - INFO - Cookie path exists: True
+2024-11-22 16:16:09,718 - INFO - === Debug Point 2 ===
+2024-11-22 16:16:09,740 - INFO - === Debug Point 3 ===
+2024-11-22 16:25:00,086 - INFO - === Debug Point 1 ===
+2024-11-22 16:25:00,087 - INFO - Profile path exists: True
+2024-11-22 16:25:00,087 - INFO - Cookie path exists: True
+2024-11-22 16:25:00,087 - INFO - === Debug Point 2 ===
+2024-11-22 16:25:00,127 - INFO - === Debug Point 3 ===
+2024-11-22 16:25:00,128 - INFO - Created backup at: /Users/timchen2/Library/Application Support/Firefox/Profiles/gwvs6fcp.default-release/cookies.sqlite.backup_20241122_162500
+2024-11-22 16:25:00,129 - INFO - Initial cookie count: 37
+2024-11-22 16:25:00,129 - INFO - Final cookie count: 0
