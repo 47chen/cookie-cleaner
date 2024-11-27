@@ -53,14 +53,11 @@ class BrowserCleanerGUI(QMainWindow):
     def create_buttons(self, layout):
         """Create and add buttons to layout"""
         buttons = [
-            ("Display Chrome Cookies", self.display_chrome_data),
-            ("Display Firefox Cookies", self.display_firefox_data),
+            ("Show Cookie Details", self.show_cookie_info),
             ("Clean Chrome Cookies", self.clean_chrome_data),
             ("Clean Firefox Cookies", self.clean_firefox_data),
-            ("Verify Cleaning", self.verify_cleaning),
-            ("Show Cookie Details", self.show_cookie_info),
-            ("Display Edge Cookies", self.display_edge_data),
-            ("Clean Edge Cookies", self.clean_edge_data)
+            ("Clean Edge Cookies", self.clean_edge_data),
+            ("Verify Cleaning", self.verify_cleaning)
         ]
 
         for text, slot in buttons:
