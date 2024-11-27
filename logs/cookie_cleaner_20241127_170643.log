@@ -1,0 +1,9 @@
+2024-11-27 17:06:43,165 - src.utils.logger - INFO - Starting Browser Cookie Cleaner
+2024-11-27 17:06:43,166 - src.utils.logger - INFO - Python version: 3.12.6 (main, Sep  6 2024, 19:03:47) [Clang 15.0.0 (clang-1500.3.9.4)]
+2024-11-27 17:06:43,166 - src.utils.logger - INFO - Operating System: darwin
+2024-11-27 17:07:13,711 - ChromeBrowser - ERROR - Error cleaning cookies: Chrome is running
+2024-11-27 17:07:15,771 - ChromeBrowser - ERROR - Error cleaning cookies: Chrome is running
+2024-11-27 17:07:33,032 - ChromeBrowser - ERROR - Error cleaning cookies: Chrome is running
+2024-11-27 17:07:33,468 - ChromeBrowser - ERROR - Error cleaning cookies: Chrome is running
+2024-11-27 17:07:34,107 - ChromeBrowser - ERROR - Error cleaning cookies: Chrome is running
+2024-11-27 17:13:27,205 - root - INFO - Application closing

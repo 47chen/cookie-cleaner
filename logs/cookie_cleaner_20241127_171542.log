@@ -1,0 +1,3 @@
+2024-11-27 17:15:42,637 - src.utils.logger - INFO - Starting Browser Cookie Cleaner
+2024-11-27 17:15:42,638 - src.utils.logger - INFO - Python version: 3.12.6 (main, Sep  6 2024, 19:03:47) [Clang 15.0.0 (clang-1500.3.9.4)]
+2024-11-27 17:15:42,638 - src.utils.logger - INFO - Operating System: darwin

@@ -52,6 +52,29 @@ class BrowserCleanerGUI(QMainWindow):
 
     def create_buttons(self, layout):
         """Create and add buttons to layout"""
+        # Create clean all button with special styling
+        clean_all_button = QPushButton("Clean All Browsers' Cookies")
+        clean_all_button.setStyleSheet("""
+            QPushButton {
+                background-color: #4CAF50;
+                color: white;
+                font-size: 14px;
+                font-weight: bold;
+                padding: 10px;
+                border-radius: 5px;
+                min-height: 50px;
+            }
+            QPushButton:hover {
+                background-color: #45a049;
+            }
+        """)
+        clean_all_button.clicked.connect(self.clean_all_browsers)
+        layout.addWidget(clean_all_button)
+        
+        # Add spacing between the special button and regular buttons
+        layout.addSpacing(20)
+        
+        # Regular buttons
         buttons = [
             ("Show Cookie Details", self.show_cookie_info),
             ("Clean Chrome Cookies", self.clean_chrome_data),
@@ -62,6 +85,7 @@ class BrowserCleanerGUI(QMainWindow):
 
         for text, slot in buttons:
             button = QPushButton(text)
+            button.setMinimumHeight(30)  # Set minimum height for regular buttons
             button.clicked.connect(slot)
             layout.addWidget(button)
 
@@ -211,3 +235,52 @@ class BrowserCleanerGUI(QMainWindow):
         """Handle application closing"""
         logging.info("Application closing")
         event.accept()
+
+    def clean_all_browsers(self):
+        """Clean cookies from all browsers"""
+        try:
+            self.loading_widget.start()
+            
+            # Store results for each browser
+            results = []
+            
+            # Clean Chrome
+            if not self.chrome.is_running():
+                success, initial, final = self.chrome.clean_cookies()
+                results.append(("Chrome", success, initial, final))
+            else:
+                self.status_widget.show_error("Please close Chrome before cleaning!")
+                
+            # Clean Firefox
+            if not self.firefox.is_running():
+                success, initial, final = self.firefox.clean_cookies()
+                results.append(("Firefox", success, initial, final))
+            else:
+                self.status_widget.show_error("Please close Firefox before cleaning!")
+                
+            # Clean Edge
+            if not self.edge.is_running():
+                success, initial, final = self.edge.clean_cookies()
+                results.append(("Edge", success, initial, final))
+            else:
+                self.status_widget.show_error("Please close Edge before cleaning!")
+            
+            # Display results
+            total_cleaned = sum(initial - final for _, success, initial, final in results if success)
+            success_count = sum(1 for result in results if result[1])
+            
+            if success_count > 0:
+                self.status_widget.show_success(
+                    f"Cleaned {total_cleaned} cookies from {success_count} browsers!"
+                )
+            else:
+                self.status_widget.show_error("Failed to clean any browsers!")
+                
+            # Update display
+            self.verify_cleaning()
+            
+        except Exception as e:
+            logging.error(f"Error cleaning all browsers: {str(e)}")
+            self.status_widget.show_error("Error cleaning browsers!")
+        finally:
+            self.loading_widget.stop()
