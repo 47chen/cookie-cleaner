@@ -1,9 +1,0 @@
-2024-11-27 17:47:22,998 - root - INFO - Starting Browser Cookie Cleaner
-2024-11-27 17:47:22,999 - root - INFO - Python version: 3.12.6 (main, Sep  6 2024, 19:03:47) [Clang 15.0.0 (clang-1500.3.9.4)]
-2024-11-27 17:47:22,999 - root - INFO - Operating System: darwin
-2024-11-27 17:47:24,353 - ChromeBrowser - INFO - Found running Chrome process: Google Chrome
-2024-11-27 17:47:29,004 - ChromeBrowser - INFO - Cleared cache: /Users/timchen2/Library/Caches/Google/Chrome/Default/Cache
-2024-11-27 17:47:29,005 - ChromeBrowser - INFO - Cleared cache: /Users/timchen2/Library/Application Support/Google/Chrome/Default/GPUCache
-2024-11-27 17:47:29,012 - ChromeBrowser - WARNING - Cookies count unchanged after cleaning
-2024-11-27 17:47:34,086 - FirefoxBrowser - ERROR - Error counting cookies: database is locked
-2024-11-27 17:47:41,646 - root - INFO - Application closing

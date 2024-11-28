@@ -1,0 +1,8 @@
+2024-11-28 14:29:20,752 - root - INFO - Starting Browser Cookie Cleaner
+2024-11-28 14:29:20,752 - root - INFO - Python version: 3.12.6 (main, Sep  6 2024, 19:03:47) [Clang 15.0.0 (clang-1500.3.9.4)]
+2024-11-28 14:29:20,752 - root - INFO - Operating System: darwin
+2024-11-28 14:29:25,700 - ChromeBrowser - INFO - Cleared cache: /Users/timchen2/Library/Caches/Google/Chrome/Default/Cache
+2024-11-28 14:29:25,701 - ChromeBrowser - INFO - Cleared cache: /Users/timchen2/Library/Application Support/Google/Chrome/Default/GPUCache
+2024-11-28 14:29:25,702 - ChromeBrowser - WARNING - Cookies count unchanged after cleaning
+2024-11-28 14:29:44,832 - root - INFO - Deleted old log file: logs/cookie_cleaner_20241127_180431.log
+2024-11-28 14:29:44,832 - root - INFO - Application closing

@@ -1,0 +1,5 @@
+2024-11-28 12:14:30,293 - root - INFO - Starting Browser Cookie Cleaner
+2024-11-28 12:14:30,293 - root - INFO - Python version: 3.12.6 (main, Sep  6 2024, 19:03:47) [Clang 15.0.0 (clang-1500.3.9.4)]
+2024-11-28 12:14:30,293 - root - INFO - Operating System: darwin
+2024-11-28 12:14:34,177 - root - INFO - Deleted old log file: logs/cookie_cleaner_20241127_175356.log
+2024-11-28 12:14:34,177 - root - INFO - Application closing
