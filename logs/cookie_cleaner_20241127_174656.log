@@ -1,7 +1,0 @@
-2024-11-27 17:46:56,529 - root - INFO - Starting Browser Cookie Cleaner
-2024-11-27 17:46:56,529 - root - INFO - Python version: 3.12.6 (main, Sep  6 2024, 19:03:47) [Clang 15.0.0 (clang-1500.3.9.4)]
-2024-11-27 17:46:56,529 - root - INFO - Operating System: darwin
-2024-11-27 17:46:59,254 - ChromeBrowser - INFO - Cleared cache: /Users/timchen2/Library/Caches/Google/Chrome/Default/Cache
-2024-11-27 17:46:59,254 - ChromeBrowser - INFO - Cleared cache: /Users/timchen2/Library/Application Support/Google/Chrome/Default/GPUCache
-2024-11-27 17:46:59,256 - ChromeBrowser - INFO - Successfully cleaned 77 cookies
-2024-11-27 17:47:05,086 - root - INFO - Application closing

@@ -5,13 +5,13 @@ from datetime import datetime
 from pathlib import Path
 import sys
 
-def cleanup_old_logs(log_dir: str, max_files: int = 10) -> None:
+def cleanup_old_logs(log_dir: str, max_files: int = 5) -> None:
     """
     Clean up old log files when the number of files exceeds the maximum.
     
     Args:
         log_dir: Directory containing log files
-        max_files: Maximum number of log files to keep (default: 10)
+        max_files: Maximum number of log files to keep (default: 5)
     """
     try:
         # Get all log files

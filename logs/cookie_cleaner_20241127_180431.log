@@ -1,0 +1,6 @@
+2024-11-27 18:04:31,321 - root - INFO - Starting Browser Cookie Cleaner
+2024-11-27 18:04:31,321 - root - INFO - Python version: 3.12.6 (main, Sep  6 2024, 19:03:47) [Clang 15.0.0 (clang-1500.3.9.4)]
+2024-11-27 18:04:31,321 - root - INFO - Operating System: darwin
+2024-11-27 18:04:34,535 - ChromeBrowser - INFO - Attempting to force quit Chrome...
+2024-11-27 18:04:38,885 - ChromeBrowser - WARNING - Cookies count unchanged after cleaning
+2024-11-27 18:04:43,626 - root - INFO - Application closing
