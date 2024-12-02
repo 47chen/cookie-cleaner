@@ -2,6 +2,11 @@
 
 A cross-platform desktop application for managing browser cookies.
 
+## Demo
+
+https://github.com/user-attachments/assets/45782dd9-e21f-4b76-9849-d6712dae4e5d
+
+
 ## Features
 
 - Clean cookies from multiple browsers (Chrome, Firefox)
